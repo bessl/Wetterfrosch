@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ request.lang }}">
+<html lang="{{request.locale_name}}">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ request.static_url('www:static/styles.css') }}">
+</head>
 <body>
-    <h1>Wetterfrosch</h1>
+
+
+<div id="header">
+    <img id="wappen" src="{{ request.static_url('www:static/brixlegg_wappen.jpg') }}" alt="Brixlegg">
+    <h1>Wetterstation Brixlegg</h1>
+</div>
 </body>
 </html>

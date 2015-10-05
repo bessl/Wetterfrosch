@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+
+#header {
+    background-color: #bc2131;
+    padding: 8px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: thin;
+}
+
+#header h1 {
+    color:white;
+    font-size: 32px;
+}
+
+#header #wappen {
+    float:left;
+    margin-right:20px;
+    width:60px;
+    border-style: solid;
+    border-width: thin;
+    border-color:black;
+}
