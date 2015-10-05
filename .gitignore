@@ -56,7 +56,12 @@ docs/_build/
 # PyBuilder
 target/
 
+# pyramid
 tmp/
 www/production.ini
 www/.idea/
 www/database.sqlite
+
+# QT cpp
+*.user
+build-*
