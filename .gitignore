@@ -58,3 +58,4 @@ target/
 
 tmp/
 www/production.ini
+www/.idea/
