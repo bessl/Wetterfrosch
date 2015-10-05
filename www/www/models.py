@@ -1,8 +1,7 @@
 from sqlalchemy import (
     Column,
-    Index,
     Integer,
-    Text,
+    DateTime
     )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -14,14 +13,19 @@ from sqlalchemy.orm import (
 
 from zope.sqlalchemy import ZopeTransactionExtension
 
+import datetime
+
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
 
-class MyModel(Base):
-    __tablename__ = 'models'
+class Measurement(Base):
+    __tablename__ = 'measurements'
     id = Column(Integer, primary_key=True)
-    name = Column(Text)
-    value = Column(Integer)
+    at = Column(DateTime, default=datetime.datetime.now())
+    temperature = Column(Integer)
+    humidity = Column(Integer)
 
-Index('my_index', MyModel.name, unique=True, mysql_length=255)
+    def __unicode__(self):
+        return u"%s: %sC, %s%%" % (self.at, self.temperature, self.humidity)
+

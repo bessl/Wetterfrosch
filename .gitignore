@@ -59,3 +59,4 @@ target/
 tmp/
 www/production.ini
 www/.idea/
+www/database.sqlite

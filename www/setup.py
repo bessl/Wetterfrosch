@@ -10,7 +10,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 
 requires = [
     'pyramid',
-    'pyramid_chameleon',
+    'pyramid_jinja2',
     'pyramid_debugtoolbar',
     'pyramid_tm',
     'SQLAlchemy',
@@ -21,7 +21,7 @@ requires = [
 
 setup(name='www',
       version='0.0',
-      description='www',
+      description='Webinterface for the Wetterfrosch project.',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -29,10 +29,10 @@ setup(name='www',
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         ],
-      author='',
-      author_email='',
-      url='',
-      keywords='web wsgi bfg pylons pyramid',
+      author='Bernhard Essl',
+      author_email='bernhardessl@gmail.com',
+      url='https://github.com/bessl/Wetterfrosch',
+      keywords='web pyramid weather weatherstation',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
