@@ -18,3 +18,23 @@ def start(request):
     return {'one': one, 'project': 'www'}
 
 
+@view_config(route_name='add')
+def add(request):
+    # only post requests are allowed
+    if request.method is not "POST":
+        return Response("Request Error!", content_type='text/plain', status_int=500)
+
+    # check for incoming data
+    try:
+        humidity = request.params['h']
+        temperature = request.params['t']
+    except(KeyError):
+        return Response("Request Error 2!", content_type='text/plain', status_int=500)
+    else:
+        humidity = int(humidity)
+        temperature = int(temperature)
+
+    m = Measurement(temperature=temperature, humidity=humidity)
+    DBSession.add(m)
+
+    return Response('add done', status_int=200)
