@@ -38,3 +38,13 @@ def add(request):
     DBSession.add(m)
 
     return Response('add done', status_int=200)
+
+
+@view_config(route_name='current', renderer='json')
+def current(request):
+    m = DBSession.query(Measurement).order_by(Measurement.at.desc()).first()
+    return {
+        'humidity': m.humidity,
+        'temperature': m.temperature,
+        'at': str(m.at)
+    }
