@@ -1,5 +1,7 @@
 # Wetterfrosch
 
+## Hardware
+
 ### Arduino
 
 Humidity and temperature sensor circuit diagram for the Arduino board. Tested with the *UNO* board.
@@ -14,3 +16,9 @@ Humidity and temperature sensor circuit diagram for Raspberry Pi.
 
 ![Raspberry Pi DH22]
 (media/raspberry_pi_dh22.png)
+
+## Software
+
+### Webinterface
+
+The webinterface is built with the Python Pyramid webframework.
