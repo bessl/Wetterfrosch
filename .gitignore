@@ -65,3 +65,6 @@ www/database.sqlite
 # QT cpp
 *.user
 build-*
+
+# osx stuff
+.DS_Store
