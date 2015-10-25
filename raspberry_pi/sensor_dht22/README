@@ -1,0 +1,10 @@
+Driver for DHT22/AM2302 Temperature and humidity sensors on 
+Raspberry Pi.
+Based on dht11.c: http://ubuntuone.com/6mT9cTREz90BUfvQD1AGNy (license unknown) 
+and https://github.com/technion/lol_dht22 (license Public domain).
+Requires wiringPi library.
+
+./configure
+make
+
+sudo ./sensor_dht 0 #0 = Pin 17
