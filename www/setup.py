@@ -17,6 +17,9 @@ requires = [
     'transaction',
     'zope.sqlalchemy',
     'waitress',
+    'python-forecastio',
+    'numpy',
+    'openweathermap_requests'
     ]
 
 setup(name='www',
@@ -43,5 +46,6 @@ setup(name='www',
       main = www:main
       [console_scripts]
       initialize_www_db = www.scripts.initializedb:main
+      extern_log = www.scripts.externlog:main
       """,
       )

@@ -14,7 +14,7 @@ from pyramid.scripts.common import parse_vars
 
 from ..models import (
     DBSession,
-    Measurement,
+    Log,
     Base,
     )
 
@@ -36,6 +36,6 @@ def main(argv=sys.argv):
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
-    with transaction.manager:
-        model = Measurement(id=1, at=datetime.datetime.now(), temperature=23, humidity=40)
-        DBSession.add(model)
+    #with transaction.manager:
+    #    model = Log(id=1, at=datetime.datetime.now(), temperature=23, humidity=40)
+    #    DBSession.add(model)
