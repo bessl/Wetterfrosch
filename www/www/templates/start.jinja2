@@ -10,10 +10,17 @@
 <div id="header">
     <img id="wappen" src="{{ request.static_url('www:static/img/brixlegg_wappen.jpg') }}" alt="Brixlegg">
     <h1>Wetterstation Brixlegg</h1>
+
 </div>
 
 <div id="content">
-    <img id="webcam" src="{{ request.static_url('www:static/img/webcam.jpg') }}" alt="Brixlegg Webcam">
+    <div class="left">
+        <img id="webcam" src="{{ request.static_url('www:static/img/webcam.jpg') }}" alt="Brixlegg Webcam">
+    </div>
+    <div class="right">
+        xxx
+         <p class="info">Latitude: 47.423634, Longitude: 11.882892</p>
+    </div>
 </div>
 </body>
 </html>

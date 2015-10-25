@@ -7,23 +7,44 @@ body {
 }
 
 #header {
-    background-color: #bc2131;
-    padding: 8px;
+    background-color: white;
+    margin-left:20px;
+    /*
     border-bottom-style: solid;
     border-bottom-color: black;
     border-bottom-width: thin;
+    */
 }
 
 #header h1 {
-    color:white;
-    font-size: 32px;
+    color:#bc2131;
+    font-size: 50px;
 }
 
 #header #wappen {
     float:left;
     margin-right:20px;
     width:60px;
+    /*
     border-style: solid;
     border-width: thin;
     border-color:black;
+    */
+}
+
+#content {
+    margin-left: 20px;
+}
+
+.info {
+    font-size: 11px;
+}
+
+.left {
+    float:left;
+    margin-right: 20px;
+}
+
+.right {
+    background-color: beige;
 }
